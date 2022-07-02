@@ -56,11 +56,13 @@
         <!--Герой-->
         <section class="hero">
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button class="hero-order" type="button">Заказать услугу</button>
+            <button class="hero-order" type="button" data-modal-open>Заказать
+                    услугу</button>
+
             <!--Модальне вікно-->
-            <div class="backdrop is-hidden">
+            <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
-                    <button class="modal-close-btn" type="button">
+                    <button class="modal-close-btn" type="button" data-modal-close>
                             <svg class="closed" width="30" height="30">
                                 <use
                                     href="./images/symbol-defs.svg#icon-close-black"></use>
