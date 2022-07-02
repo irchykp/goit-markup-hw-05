@@ -151,6 +151,12 @@ img {
     fill: currentColor;
 }
 
+.navigation .link,
+.contacts .link,
+.contact-info .link {
+    transition: color 250ms var(--timing-function);
+}
+
 .navigation .link:hover,
 .contacts .link:hover,
 .navigation .link:focus,
@@ -226,6 +232,7 @@ img {
     background-color: var(--accent-background);
     cursor: pointer;
     color: var(--secondary-color);
+    transition: background-color 250ms var(--timing-function);
 }
 
 .hero-order:hover,
@@ -361,6 +368,7 @@ img {
 
 .team .icon-social {
     fill: currentColor;
+    transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .team .social-link:hover,
@@ -383,16 +391,17 @@ img {
     border: 1px solid #afb1b8;
     border-radius: 4px;
     color: var(--icon-fill-primary);
-}
-
-.customers .icon-customers {
-    fill: currentColor;
+    transition: dorder 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
 .customers .link:hover,
 .customers .link:focus {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
+}
+
+.customers .icon-customers {
+    fill: currentColor;
 }
 
 .logo-contacts {
@@ -450,15 +459,16 @@ img {
 
 .logo-contacts .social-link {
     background-color: rgba(255, 255, 255, 0.1);
-}
-
-.logo-contacts .icon-social {
-    fill: var(--icon-fill-secondary);
+    transition: background-color 250ms var(--timing-function);
 }
 
 .logo-contacts .social-link:hover,
 .logo-contacts .social-link:focus {
     background-color: var(--accent-color);
+}
+
+.logo-contacts .icon-social {
+    fill: var(--icon-fill-secondary);
 }
 
 .projects .filter-box {
@@ -482,6 +492,7 @@ img {
     color: var(--title-color);
     cursor: pointer;
     text-align: center;
+    transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
 .filter .filter-item:not(:last-child) {
@@ -513,6 +524,10 @@ img {
     margin-top: var(--list-gap);
     flex-direction: column;
     flex-basis: calc(100% / 3-var(--list-gap));
+}
+
+.projects .link {
+    transition: box-shadow 250ms var(--timing-function);
 }
 
 .projects .link:hover,
