@@ -19,6 +19,7 @@
     --list-gap: 30px;
     --icon-fill-primary: #afb1b8;
     --icon-fill-secondary: #ffffff;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -161,6 +162,25 @@ img {
 
 .logo-nav .current {
     color: var(--accent-background);
+    position: relative;
+}
+
+.current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    opacity: 0;
+    transition: opacity 250ms var(--timing-function);
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.current:hover::after {
+    opacity: 1;
 }
 
 .hero {
